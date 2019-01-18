@@ -1,3 +1,8 @@
+ 在ubuntu里面跑docker容器进行shadowsocks配置
+ ```
+ docker run -d -p {{.Port}}:8388 -p {{.Port}}:8388/udp -e METHOD={{.Method}} -e PASSWORD={{.Password}} -e TIMEOUT={{.Timeout}} --restart=always --name=ss shadowsocks/shadowsocks-libev
+ ```
+ 
  ubuntu翻墙步骤
  1. shodowsocks客户端下载与配置
   - sudo apt-get update
@@ -25,3 +30,4 @@
    user=nobody
    redirect_stderr=true
    stdout_logfile=/home/daath/SSproxy/shadowsocks.log
+
